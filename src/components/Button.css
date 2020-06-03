@@ -1,0 +1,26 @@
+/* https://stackoverflow.com/questions/13932946 (Transparent cut out of background) */
+.btn {
+	padding: 0.5rem;
+	color: black;
+	border: 2px solid black;
+	border-radius: 0.25rem;
+	transition: background-color 0.5s, color 0.5s;
+	mix-blend-mode: multiply;
+}
+
+.btn:hover {
+	top: 0;
+	color: white;
+	background-color: black;
+	padding: 0.5rem;
+}
+
+.hop-wrapper:hover .hop { 
+	animation: hop 1s ease-in-out infinite; 
+}
+
+@keyframes hop {
+	0% {transform: translateY(0);}
+	30% {transform: translateY(-10px);}
+	60% {transform: translateY(0);}
+}
